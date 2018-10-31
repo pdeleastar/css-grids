@@ -5,10 +5,12 @@ const fullScreen = 1280
 const tablet = 1280
 const mobile = 768
 
-const grid = css`
+const fullScreenMargin = 8
+const tabletMargin = 5
+const mobileMargin = 2
 
+const grid = css`
   display: grid;
-  margin: 1.5vh;
   grid-gap: 0.5vh;
   grid-template-rows: 15vh 40vh 30vh 10vh;
 
@@ -18,6 +20,7 @@ const grid = css`
     "c c c c n n"
     "k k k k o o"
     "f f f f f f";
+    margin: 1.5vh ${fullScreenMargin}vh 1.5vh ${fullScreenMargin}vh;
   };
   @media (max-width: ${tablet}px) {
     grid-template-areas:
@@ -25,6 +28,7 @@ const grid = css`
     "c c c c c c"
     "k k o o n n"
     "f f f f f f";
+    margin: 1.5vh ${tabletMargin}vh 1.5vh ${tabletMargin}vh;
   };
   @media (max-width: ${mobile}px) {
     grid-template-areas:
@@ -33,6 +37,7 @@ const grid = css`
     "k k k k k k"
     "n n n o o o"
     "f f f f f f";
+    margin: 1.5vh ${mobileMargin}vh 1.5vh ${mobileMargin}vh;
   };
 `;
 
@@ -50,7 +55,6 @@ const news = css`
 
 const keystats = css`
   grid-area: k;
-  
 `;
 
 const overview = css`
@@ -60,8 +64,6 @@ const overview = css`
 const footer = css`
   grid-area: f;
 `;
-
-
 
 const Item = styled("div")`
   justify-content: center;
