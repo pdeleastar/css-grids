@@ -6,6 +6,7 @@ const tablet = 1280
 const mobile = 768
 
 const grid = css`
+
   display: grid;
   margin: 1.5vh;
   grid-gap: 0.5vh;
